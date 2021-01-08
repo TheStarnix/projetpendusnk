@@ -17,6 +17,7 @@ Le dessin une fois terminé montre un bonhomme allumette pendu.
 
 ## CAHIER DES CHARGES:
 <ins>PARTIE JEU:</ins>
+
 **Fond:** Image d’un village.
 
 **Image:** https://cdna.artstation.com/p/assets/images/images/022/879/816/large/damien-hausson-promo-bg-low-copie.jpg?1578141507
