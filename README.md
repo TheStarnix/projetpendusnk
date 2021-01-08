@@ -18,15 +18,27 @@ Le dessin une fois terminé montre un bonhomme allumette pendu.
 ## CAHIER DES CHARGES:
 <ins>PARTIE JEU:</ins>
 **Fond:** Image d’un village.
+
 **Image:** https://cdna.artstation.com/p/assets/images/images/022/879/816/large/damien-hausson-promo-bg-low-copie.jpg?1578141507
+
 **Fond qui s’anime:** Mur qui encaisse. Le mur doit donc interagir en fonction de la vie qui sera sous forme d’HUD tout en haut de la fenêtre.
+
 **Personnages:** Des monstres “titans” qui sont plus nombreux à chaque erreur.
+
 **Nombre de vie total:** 7. *(-1 vie par erreur)*.
+
 **Mots:** Mot aléatoire qui sera défini et dont la première lettre figurera. En fonction de la difficulté choisie au début, le mot aura entre:
+
 👉Facile: **2** et **5** lettres.
+
 👉Avérée: **6** et **8** lettres.
+
 👉Complexe: **9** et **12** lettres.
+
 Pour chaque lettre, il y aura un trait afin d’indiquer au joueur la longueur du mot.
+
 Si une lettre est trouvée, la lettre en question apparaîtra dans tous les endroits où il faut.
+
 **Son:** une très légère musique sera jouée afin de plonger dans l’ambiance le joueur. La musique changera en fonction de la difficulté.
+
 **Système:** Il sera possible si le joueur a perdu ou gagné de rejouer directement par un bouton.
