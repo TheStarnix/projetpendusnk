@@ -1,18 +1,6 @@
 import pygame
 import random
 
-def principal():
-    'Fonction principale.'
-    print(manage_level()) 
-    #On initialise les librairies.
-    pygame.init()
-    pygame.mixer.init()
-    
-    #Programme principal
-    niv = manager_level()
-    mot = fichier()
-    print(comptage_lettres(mot))
-   
 def manage_level():
     'Fonction gérant le système de niveau.'
     liste_possibilites = ['1','2','3']
@@ -32,8 +20,27 @@ def manage_level():
                 return niv
         #Si le programme continue c'est qu'il a mal choisit, on l'éclaircit sur ce qu'il doit réecrire avant de revenir au début de la boucle.
         print("Merci de choisir entre le niveau 1 et 3.")
-        
-def fichier():
+
+def words_level(niv, count, mot):
+    'Fonction qui relance un mot si le nombre de lettres par niveau n"est pas respecté.'
+    #On cherche le niveau qu'il a choisi et on vérifie s'il y a bien le nombre de lettres demandé.
+    if niv == 1:
+        if count>2 and count<6:
+            return True
+        else:
+            return False
+    elif niv == 2:
+        if count>6 and count<9:
+            return True
+        else:
+            return False
+    else:
+        if count>9 and count<12:
+            return True
+        else:
+            return False
+
+def file():
     #Ouvrir le fichier dictionnaire contenant 22 740 mots (un mot par ligne).
     f = open("dictionnaire.txt", mode="r", encoding="utf-8")
     #Tirer au sort une ligne de façon aléatoire parmi 0 - 22 740 lignes.
@@ -62,12 +69,12 @@ def fichier():
         chaine = chaine.replace(accent[i], sans_accent[i]) #on replace les mots sans accent
         
     #On return le résultat.
-    return chaîne.upper()      
+    return chaîne.upper()
 
-def comptage_lettres(mot):
+def count(mot):
     #demande a l'utilisateur de rentrer un mot
-    calcul=0
-    #il prend calcul égal à 0 
+    calcul=-1
+    #il prend calcul égal à -1 car en mettant à 0, il aurait un total de lettres avec 1 de moins.
     for x in mot:
         #il fait pour une valeur dans mot:
         calcul=calcul+1
@@ -75,4 +82,30 @@ def comptage_lettres(mot):
     return calcul
     #retourner la fonction
 
-principal()
+def remplacement_tirets(mot):
+    'Fonction permettant de remplacer chaque lettre d"un mot par un tiret.'
+    #On définit une nouvelle variable calcul qui permettra de compter chaque lettre.
+    calcul=-1
+    #Boucle qui permet de compter chaque lettre dans un mot.
+    for x in mot:
+        #Il incrémente 1 à chaque fois qu'il trouve une nouvelle lettre.
+        calcul=calcul+1
+    return ("_ " * calcul)
+    #Il renvoie la var calcul qui permettra de recevoir le résultat.
+    print()
+    #On multiplie un tiret par le nombre de fois qu'il avait trouvé de lettres dans un mot.
+
+
+#On initialise les librairies.
+pygame.init()
+pygame.mixer.init()
+    
+#Programme principal
+niv = manage_level()
+mot = file()
+condition = words_level(int(niv), count(mot), mot)
+while condition == False:
+    mot = file()
+    condition = words_level(int(niv), count(mot), mot)
+print("Mot à trouver:" + mot + str(count(mot)) + " lettres.")
+print(remplacement_tirets(mot))
