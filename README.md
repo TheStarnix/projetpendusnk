@@ -43,3 +43,8 @@ Si une lettre est trouvée, la lettre en question apparaîtra dans tous les endr
 **Son:** une très légère musique sera jouée afin de plonger dans l’ambiance le joueur. La musique changera en fonction de la difficulté.
 
 **Système:** Il sera possible si le joueur a perdu ou gagné de rejouer directement par un bouton.
+
+Pour le rendu final (SOUS FORME DE ZIP):
+→ Nom & prénoms
+→ Organigramme fonctions
+→ Programme.
