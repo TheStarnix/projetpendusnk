@@ -48,3 +48,13 @@ Pour le rendu final (SOUS FORME DE ZIP):
 → Nom & prénoms
 → Organigramme fonctions
 → Programme.
+
+## FONCTIONS:
+- manage_levels → Fonction gérant le système de niveau.
+- words_level → Fonction qui relance un mot si le nombre de lettres par niveau n"est pas respecté.
+- file → Fonction permettant d'ouvrir le dictionnaire.txt
+- count → Fonction permettant de compter le nombre de lettres dans un mot.
+- remplacement_tirets → Fonction permettant de remplacer chaque lettre d'un mot par un tiret.
+- tracer_pendu → fonction qui permet d'écrire dans la console le bonhomme en fonction de la vie.
+
+
